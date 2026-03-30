@@ -1,0 +1,12 @@
+# Maven build output
+target/
+dependency-reduced-pom.xml
+
+# IDE / editor
+.vscode/
+*.iml
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
