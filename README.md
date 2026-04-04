@@ -1,6 +1,6 @@
 # Swagger / Postman Importer for JMeter
 
-A JMeter plugin (version **1.1**) that lets you instantly convert **OpenAPI/Swagger** specifications and **Postman collections** into fully-formed JMeter Test Plans (`.jmx`), saving hours of manual scripting.
+A JMeter plugin that lets you instantly convert **OpenAPI/Swagger** specifications and **Postman collections** into fully-formed JMeter Test Plans (`.jmx`), saving hours of manual scripting.
 
 ---
 
@@ -65,10 +65,10 @@ Select a Swagger/OpenAPI (JSON or YAML) or Postman Collection (JSON) file, and t
 
 ### Option A – Drop-in JAR (recommended)
 
-1. Download `swagger-postman-importer-1.1.jar` from the [Releases](../../releases) page.
+1. Download `swagger-postman-importer-<version>.jar` from the [Releases](../../releases) page.
 2. Copy the JAR into JMeter's plugin directory:
    ```
-   $JMETER_HOME/lib/ext/swagger-postman-importer-1.1.jar
+   $JMETER_HOME/lib/ext/swagger-postman-importer-<version>.jar
    ```
 3. (Re)start JMeter.
 
@@ -103,7 +103,7 @@ If you use the [JMeter Plugins Manager](https://jmeter-plugins.org/install/Insta
 git clone https://github.com/bakthava/swagger-postman-importer.git
 cd swagger-postman-importer
 mvn clean package -DskipTests
-# Output: target/swagger-postman-importer-1.1.jar
+# Output: target/swagger-postman-importer-<version>.jar
 ```
 
 Copy the produced JAR to `$JMETER_HOME/lib/ext/` as described in [Installation](#installation).
