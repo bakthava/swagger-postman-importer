@@ -1,1 +1,1 @@
-com.example.jmeter.importer.SwaggerPostmanImporterAction
+kg.apc.jmeter.plugins.importer.SwaggerPostmanImporterAction
