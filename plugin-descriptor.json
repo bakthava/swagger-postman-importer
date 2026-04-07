@@ -1,0 +1,32 @@
+{
+  "name": "Swagger / Postman Importer for JMeter",
+  "version": "1.1",
+  "description": "JMeter plugin that imports Swagger/OpenAPI and Postman collections and generates JMeter Test Plans (.jmx)",
+  "groupId": "com.example",
+  "artifactId": "swagger-postman-importer",
+  "type": "plugin",
+  "author": "bakthava",
+  "homepage": "https://github.com/bakthava/swagger-postman-importer",
+  "sourceUrl": "https://github.com/bakthava/swagger-postman-importer",
+  "downloadUrl": "https://github.com/bakthava/swagger-postman-importer/releases/tag/v1.1",
+  "changelog": {
+    "1.1": "Updated JMeter dependencies to 5.6.3, upgraded JSON library, optimized for Java 1.8 compatibility, removed unused dependencies (snakeyaml, JUnit)",
+    "1.0": "Initial release - Support for Swagger/OpenAPI and Postman collection imports"
+  },
+  "dependencies": {
+    "jmeterVersion": "5.1.1+",
+    "javaVersion": "1.8+"
+  },
+  "categories": [
+    "plugin",
+    "api-testing",
+    "import"
+  ],
+  "features": [
+    "Import Swagger/OpenAPI specifications",
+    "Import Postman collections",
+    "Generate JMeter Test Plans (.jmx)",
+    "Automatic HTTP sampler generation",
+    "Request parameterization support"
+  ]
+}
