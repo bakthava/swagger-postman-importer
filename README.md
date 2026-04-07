@@ -382,7 +382,7 @@ A: Visit https://github.com/bakthava/swagger-postman-importer/issues and create 
 ## 📧 Contact
 
 For questions, suggestions, or feedback:
-- **Author:** Bakthavachalam
+- **Author:** Vinodh kumar Bakthavachalu
 - **Email:** via GitHub profile
 - **GitHub:** https://github.com/bakthava
 
