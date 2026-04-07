@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>kg.apc</groupId>
-    <artifactId>jmeter-plugin-swagger-postman-importer</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>swagger-postman-importer</artifactId>
     <version>1.1</version>
     <packaging>jar</packaging>
     <name>Swagger / Postman Importer for JMeter</name>
@@ -14,7 +14,7 @@
         <dependency>
             <groupId>org.apache.jmeter</groupId>
             <artifactId>ApacheJMeter_core</artifactId>
-            <version>5.1.1</version>
+            <version>5.6.3</version>
             <scope>provided</scope>
         </dependency>
 
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>org.apache.jmeter</groupId>
             <artifactId>ApacheJMeter_http</artifactId>
-            <version>5.1.1</version>
+            <version>5.6.3</version>
             <scope>provided</scope>
         </dependency>
 
@@ -30,7 +30,7 @@
         <dependency>
             <groupId>org.apache.jmeter</groupId>
             <artifactId>ApacheJMeter_components</artifactId>
-            <version>5.1.1</version>
+            <version>5.6.3</version>
             <scope>provided</scope>
         </dependency>
 
@@ -38,22 +38,7 @@
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20210307</version>
-        </dependency>
-
-        <!-- YAML parsing for OpenAPI specs -->
-        <dependency>
-            <groupId>org.yaml</groupId>
-            <artifactId>snakeyaml</artifactId>
-            <version>1.32</version>
-        </dependency>
-
-        <!-- JUnit for testing -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
+            <version>20231013</version>
         </dependency>
     </dependencies>
 
@@ -64,7 +49,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <release>8</release>
+                    <release>11</release>
                 </configuration>
             </plugin>
 
@@ -85,24 +70,20 @@
                             <artifactSet>
                                 <includes>
                                     <include>org.json:json</include>
-                                    <include>org.yaml:snakeyaml</include>
                                 </includes>
                             </artifactSet>
-                            <!-- Relocate dependencies to avoid conflicts with other plugins -->
+                            <!-- Relocate org.json to avoid conflicts with other plugins -->
                             <relocations>
                                 <relocation>
                                     <pattern>org.json</pattern>
-                                    <shadedPattern>kg.apc.shaded.org.json</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>org.yaml</pattern>
-                                    <shadedPattern>kg.apc.shaded.org.yaml</shadedPattern>
+                                    <shadedPattern>com.example.shaded.org.json</shadedPattern>
                                 </relocation>
                             </relocations>
                             <filters>
                                 <filter>
                                     <artifact>*:*</artifact>
                                     <excludes>
+                                        <exclude>META-INF/MANIFEST.MF</exclude>
                                         <exclude>META-INF/LICENSE*</exclude>
                                         <exclude>META-INF/NOTICE*</exclude>
                                     </excludes>
